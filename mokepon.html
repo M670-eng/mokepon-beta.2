@@ -1,0 +1,121 @@
+  <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> beta(26376767347.723862)</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./stilitos.css">
+    </head>
+    <body>
+        <section id="hola">
+        <section id="pantalla-inicial">
+            <h1>¡Bienvenid@ a Mokepon! <br>
+                     Welcome to Mokepon!                
+            </h1>
+            <p>Prepárate para una aventura llena de estrategia y emoción.</p>
+            
+            <div class="botones-inicio">
+                <button id="btn-info">Información</button>
+                <button id="btn-jugar">Jugar</button>
+                <button id="btn-config">Configuración</button>
+            </div>
+        </section>
+            
+        <section id="info" class="pantalla-oculta">
+            <h2>Bienvenido a Mokepon</h2>
+            <p>
+Hola Bienvenido a mi juego!
+            en Este 'programa' vas a tener una experiencia Muy parecida al tan reconocido Pokemon,
+            pero da igual (Este programa también esta inspirado al de platzi)
+                si quieres Los assests, el archivo y como logre hacer Este programa aquí te te voy a adjuntar un archivo ZIP y también el 			     enlace a Github y mi repositorio. ¡que Lo disfrutes!.<br>
+            <a href="<a>https://github.com/M670-eng/mokepon-beta.2.git</a> ">mi repositorio</a>                 
+            </p>            
+            <button id="btn-cerrar-info">Cerrar</button>            
+        </section>            
+   </section>
+        
+        <section id="configuracion" class="pantalla-oculta">
+              <h2>Configuración</h2>
+              <label for="musica">Música:</label>
+              <input type="checkbox" id="musica">
+              
+              <label for="sonido">Efectos de sonido:</label>
+              <input type="checkbox" id="sonido">
+              
+              <label for="modoOscuro">Modo Oscuro:</label>
+              <input type="checkbox" id="modoOscuro">
+              
+              <button id="btn-guardar-config">Guardar Configuración</button>
+        </section>
+        
+        <section id="seleccionar-mascota">
+            <h1 id="titulo">Mokepon</h1>
+            <a href="file:///storage/emulated/0/curso%20de%20platzi/programar/mokepon/mokepon.html">programa normal aqui</a>         
+            
+            <h2 class="subtitulo">Elige tu mascota:</h2>
+            
+            <div class="tarjetas">
+             <label class="tarjeta-de-mokepon-hipodoge" for="hipodoge">
+                 <p>Hipodoge</p>
+                 <img src="assests/hipodoge.png" alt="Hipodoge">                 
+             </label>
+  
+            <input type="radio" name="mascota" id="hipodoge" />
+            
+            <label class="tarjeta-de-mokepon-capipepo" for="capipepo">
+                <p>Capipepo</p>
+                 <img src="assests/capipepo.png" alt="Capipepo">
+            </label>
+            <input type="radio" name="mascota" id="capipepo" />
+            
+            <label class="tarjeta-de-mokepon-ratigueya" for="ratigueya">
+                <p>Ratigueya</p>
+                <img src="assests/ratigueya.png" alt="Ratigueya">
+            </label>
+            <input type="radio" name="mascota" id="ratigueya" />
+            </div>
+
+            <button  id="boton-mascota">GO!</button>
+        </section>
+        <div id="alerta" class="custom-alert">
+
+            <button onclick="this.parentElement.style.display='none'">SI</button>
+         🚨 Acabas de no elegir la mascota Porfavor... reinicie el programa <br>
+        </div>
+        
+        <section id="seleccionar-ataque">
+                            
+            <label for="musica1">¿Quieres musica?</label>
+            <audio id="musica1" controls>                    
+                    <source src="audio/musica.mp3" type="audio/mpeg">
+            </audio>
+
+            <h1 id="titulo">Te has encontrado con un mokepon</h1>
+            
+            <h2 class="subtitulo">Elige tu ataque:</h2>           
+            
+            <div>                
+                 
+                <div>                
+                    <label for="HP jugador"><span id="mascota-jugador"></span> HP </label>  
+                    <progress value="100" max="100" id="HP jugador"></progress>
+                    <label for="HP enemigo"><span id="mascota-enemigo"></span> HP (enemigo) </label>
+                    <progress value="100" max="100" id="HP enemigo"></progress>
+                </div>
+                 
+            <div id="zona-batalla">
+                
+                <section id="mensajes"></section>
+                
+                <div id="botones-ataque">
+                    
+                    <button id="boton-fuego" class="fuego">Fuego 🔥</button>
+                    <button id="boton-agua" class="agua">Agua 💧</button>
+                    <button id="boton-tierra" class="tierra">Tierra 🌱</button>
+                    <button onclick="reiniciarJuego()" class="uhir">UHIR! 😵</button>
+                </div>                                             
+                                          
+        </section>
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>
